@@ -7,7 +7,9 @@ class App extends React.Component {
     }
     render () {
         return (
-        <div></div>
+            <div>
+                <App />
+            </div>
     }
 }
 export default App
