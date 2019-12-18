@@ -1,8 +1,10 @@
 import React from 'react'
 
-const Greeting = props => {
+const embed = props => {
+  const item = 'SDカード'
+  const value = '1200'
   return (
-    <h1>[Math.floor(Math.random() * 3)]</h1>
+    <h1>{item}-{value}円</h1>
   )
 }
 
@@ -15,7 +17,7 @@ class App extends React.Component {
   render () {
     return (
       <div>
-        <Greeting text='こんにちは。' />
+        <embed />
       </div>
     )
   }
