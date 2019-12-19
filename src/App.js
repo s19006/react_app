@@ -1,25 +1,37 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-const embed = props => {
-  const item = 'SDカード'
-  const value = '1200'
-  return (
-    <h1>{item}-{value}円</h1>
-  )
-}
-
-class App extends React.Component {
+class App extends Component {
   constructor (props) {
     super(props)
-    this.state = {}
+    console.log('constructor')
+  }
+
+  componentDidMount () {
+    console.log('compomentDidMount')
+  }
+
+  sholdComponentUpdate (nextProps) {
+    console.log('sholdComponentUpdate')
+  }
+
+  componentDidUpdate () {
+    console.log('compomentDidUpdate')
   }
 
   render () {
+    console.log('render')
+    const setStateHandler = (e) => {
+      console.log('* call setState()')
+      this.setState({ r: Math.random()})
+    }
     return (
       <div>
-        <embed />
+        <button onClick={setStateHandler}>
+      setState
+        </button>
       </div>
     )
   }
 }
+
 export default App
