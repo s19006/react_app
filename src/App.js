@@ -1,10 +1,11 @@
 import React from 'react'
 
-const Start = props => {
+const Embed = props => {
   return (
-    <h1 />
+    <h1>{props.item}-{props.value}円</h1>
   )
 }
+
 class App extends React.Component {
   constructor (props) {
     super(props)
@@ -13,7 +14,9 @@ class App extends React.Component {
 
   render () {
     return (
-      <Start />
+      <div>
+        <Embed item='値段は' value='1200' />
+      </div>
     )
   }
 }
